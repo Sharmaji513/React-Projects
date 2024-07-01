@@ -5,6 +5,7 @@ const ExpenseTracker = () => {
   const [amount, setAmount] = useState("");
   const [expenses, setExpenses] = useState([]);
 
+
   const addExpense = () => {
     if (!input || !amount) return;
 
@@ -22,6 +23,9 @@ const ExpenseTracker = () => {
   const deleteExpense = (id) => {
     setExpenses(expenses.filter((expenses) => expenses.id !== id));
   };
+
+
+
   return (
     <div className="flex flex-col">
       <h2 className="mt-10">Expense Tracker</h2>
@@ -68,6 +72,7 @@ const ExpenseTracker = () => {
           ))}
         </ul>
       </div>
+      
     </div>
   );
 };
